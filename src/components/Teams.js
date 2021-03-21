@@ -23,7 +23,7 @@ export default class Klasemen extends React.Component {
 
     return (
       <div className="main">
-        <div className="section">  
+        <div className="section-team">  
     <Card cover={<img src={this.state.team[0].strTeamBanner} alt="banner"/>}>
         <Row style={{marginTop:50}}>
             <Col span={12}>
@@ -36,7 +36,6 @@ export default class Klasemen extends React.Component {
                 {this.state.team[0].intFormedYear}
                 </p>
                 {this.state.team[0].strDescriptionEN}
-                
             </Col>
         </Row>
     </Card>
