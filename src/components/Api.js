@@ -11,7 +11,7 @@ export default class Klasemen extends React.Component {
   };
 
   async componentDidMount() {
-    const url = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021";
+    const url = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l="+this.props.match.params.idLeague+"&s=2020-2021";
     const response = await fetch(url);
     const responseJson = await response.json();
     this.setState({ team: responseJson.table, loading: false });
@@ -26,11 +26,7 @@ export default class Klasemen extends React.Component {
     return (
       <div className="main">
         <div className="section">  
-    <Card title="Kelompok 6" >
-    <Meta style={{width:180, marginLeft:360, marginBottom:30}}
-      avatar={<Avatar src={Epl} />}
-      title="Premier League"
-    />
+    <Card  title={this.state.team[0].strLeague} >
       
     <table>
             <tr>
@@ -62,7 +58,6 @@ export default class Klasemen extends React.Component {
                 </tr>
             </table>
              })}
-              
     </Card>
         </div>
       </div>

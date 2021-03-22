@@ -9,7 +9,7 @@ export default class Klasemen extends React.Component {
 
   
   async componentDidMount() {
-    const url = 'https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id='+this.props.match.params.id;
+    const url = 'https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id='+this.props.match.params.idTeam;
     const response = await fetch(url);
     const responseJson = await response.json();
     this.setState({ team: responseJson.teams, loading: false });
