@@ -38,6 +38,20 @@ export default class Klasemen extends React.Component {
                 {this.state.team[0].strDescriptionEN}
             </Col>
         </Row>
+        <h1 style={{margin:50}}>Stadium</h1>
+        <Row>
+        <Col span={12}>
+                <img src={this.state.team[0].strStadiumThumb} style={{width:400, height:300}} alt="logo"/>
+            </Col>
+            <Col span={12} >
+                <p style={{fontSize:30}}>{this.state.team[0].strStadium}
+                </p>
+                <p style={{fontSize:20, color:'grey'}}>
+                {this.state.team[0].intStadiumCapacity}
+                </p>
+                {this.state.team[0].strStadiumLocation}
+            </Col>
+        </Row>
     </Card>
         </div>
       </div>
