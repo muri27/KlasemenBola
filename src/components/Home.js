@@ -1,6 +1,10 @@
 import React from "react";
 import { Card, Divider, Avatar } from 'antd';
 import Epl from '../assets/epl.png';
+import Bundesliga from '../assets/bundesliga.png';
+import Serie from '../assets/serie.png';
+import Ligue from '../assets/ligue.png';
+import Laliga from '../assets/laliga.png';
 import { Link } from "react-router-dom"
 const { Meta } = Card;
 
@@ -31,11 +35,21 @@ export default class Klasemen extends React.Component {
       title="Klasemen Liga"
     />
                 <ul style={{marginTop:50, listStyle:'none'}}>
-                  <li><Link to={{ pathname: "/leagues/" + this.state.team[0].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[0].strLeague}</Link><Divider/></li>
-                  <li><Link to={{ pathname: "/leagues/" + this.state.team[3].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[3].strLeague}</Link><Divider/></li>
-                  <li><Link to={{ pathname: "/leagues/" + this.state.team[4].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[4].strLeague}</Link><Divider/></li>
-                  <li><Link to={{ pathname: "/leagues/" + this.state.team[5].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[5].strLeague}</Link><Divider/></li>
-                  <li><Link to={{ pathname: "/leagues/" + this.state.team[6].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[6].strLeague}</Link><Divider/></li>
+                  <li>
+                    <img src={Epl} alt="logo" style={{width:30, height:30, marginRight:10}}/>
+                    <Link to={{ pathname: "/leagues/" + this.state.team[0].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[0].strLeague}</Link><Divider/></li>
+                  <li>
+                    <img src={Bundesliga} alt="logo" style={{width:30, height:30, marginRight:10}}/>
+                    <Link to={{ pathname: "/leagues/" + this.state.team[3].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[3].strLeague}</Link><Divider/></li>
+                  <li>
+                    <img src={Serie} alt="logo" style={{width:30, height:50, marginRight:10}}/>
+                    <Link to={{ pathname: "/leagues/" + this.state.team[4].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[4].strLeague}</Link><Divider/></li>
+                  <li>
+                    <img src={Ligue} alt="logo" style={{width:30, height:50, marginRight:10}}/>
+                    <Link to={{ pathname: "/leagues/" + this.state.team[5].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[5].strLeague}</Link><Divider/></li>
+                  <li>
+                    <img src={Laliga} alt="logo" style={{width:35, height:50, marginRight:10}}/>
+                    <Link to={{ pathname: "/leagues/" + this.state.team[6].idLeague}} style={{textDecoration: 'none',color:'black'}}>{this.state.team[6].strLeague}</Link><Divider/></li>
                 </ul>
     </Card>
         </div>
